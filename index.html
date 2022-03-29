@@ -39,7 +39,8 @@
 </head>
 <body>
     <header id="main_header">
-        <h1>모터스포츠 결과표</h1>
+        <!--수정한 부분-->
+        <h1>이것은 테스트용 입니다.</h1>
     </header>
     <nav id="main_gnb">
         <ul class="left">
@@ -61,32 +62,32 @@
                     <script>
 
                         document.write("현재시간 : "+getTimeStamp() + '<br />');
-                                                                                                
+
                         function getTimeStamp() {
                           var now = new Date()
-                        
+
                           var s =
                             leadingZeros(now.getFullYear(), 4) + '-' +
                             leadingZeros(now.getMonth() + 1, 2) + '-' +
                             leadingZeros(now.getDate(), 2) + ' ' +
-                        
+
                             leadingZeros(now.getHours(), 2) + ':' +
                             leadingZeros(now.getMinutes(), 2);
-                        
+
                           return s;
                         }
-                                                                        
+
                         function leadingZeros(n, digits) {
                           var zero = '';
                           n = n.toString();
-                        
+
                           if (n.length < digits) {
                             for (i = 0; i < digits - n.length; i++)
                               zero += '0';
                           }
                           return zero + n;
                         }
-                        
+
                     </script>
                 </article>
                 <article>
@@ -98,32 +99,32 @@
                         document.write("다음 그랑프리까지: " + getTimegap() + "일" + '<br />');
 
                         function getTimegp() {
-                        
+
                             var canada = new Date(2019, 5, 10);
 
                             var s =
                             leadingZeros(canada.getFullYear(), 4) + '-' +
                             leadingZeros(canada.getMonth() + 1, 2) + '-' +
                             leadingZeros(canada.getDate(), 2);
-                        
+
                           return s;
                         }
 
                         function getTimegap() {
-                            var now = new Date();  
+                            var now = new Date();
                             var canada = new Date(2019, 5, 10);
                             var gap = new Date(0, 0, 0, 0, 0, canada-now);
 
                             var gap = canada.getTime() - now.getTime();
                             gap = Math.floor((gap / (1000 * 60 * 60 * 24)+1));
-                        
+
                           return gap;
                         }
 
                         function leadingZeros(n, digits) {
                           var zero = '';
                           n = n.toString();
-                        
+
                           if (n.length < digits) {
                             for (i = 0; i < digits - n.length; i++)
                               zero += '0';
